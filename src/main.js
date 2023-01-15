@@ -3,6 +3,32 @@ import Alpine from "alpinejs";
 window.Alpine = Alpine;
 Alpine.start();
 
+// Darkmode lightmode toggle
+const darkmode = document.querySelector("#dark");
+const lightmode = document.querySelector("#light");
+
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+darkmode.addEventListener("click", function () {
+  console.log("clickDark");
+  document.documentElement.classList.add("dark");
+  localStorage.theme = "dark";
+});
+
+lightmode.addEventListener("click", function () {
+  console.log("clickLight");
+  document.documentElement.classList.remove("dark");
+  localStorage.theme = "light";
+});
+
 // MENU
 const menu_click = document.querySelector(".menu_click");
 var menu_punkter = document.querySelector(".menu_punkter");

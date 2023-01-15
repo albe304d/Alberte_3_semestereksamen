@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{html,vue,js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      // Når farverne bruges til styling, skriver man eksempelvis xx-pink-700, da bindestregen automatisk tilføjes
+      // (Globale tokens) Når farverne bruges til styling, skriver man eksempelvis xx-pink-700, da bindestregen automatisk tilføjes
       pink: {
         100: "#FEF8FB",
         200: "#FCEAF3",
@@ -52,6 +53,7 @@ module.exports = {
         green: "#2a5f38",
       },
 
+      // Alias tokens/Component-specific tokens
       // tekstfarver
       color_h1: "#A03A00",
       color_h2: "#A03A00",
@@ -83,7 +85,20 @@ module.exports = {
 
       // Cards
       cardsBgColor: "#FFFFFF",
+
+      // Darkmode
+      // tekstfarver
+      darkColor_h1: "#F5B8D6",
+      darkColor_h2: "#F5B8D6",
+      darkOverskriftColor: "#F5B8D6",
+      // tokens til components
+      darkFooter: "#262626",
+      darkCopyColor: "#FEF8FB",
+      darkMenuBackgroundColor: "#1A1A1A",
+      // Cards
+      darkCardsBgColor: "#333333",
     },
+
     fontSize: {
       // Ved styling skriver man eksempelvis text-H3_mobile
 

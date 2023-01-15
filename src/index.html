@@ -8,7 +8,9 @@
     <title>Forside</title>
     <meta name="robots" content="noindex" />
   </head>
-  <body class="bg-pink-100 text-body_base text-copyColor">
+  <body
+    class="bg-pink-100 text-body_base text-copyColor dark:bg-black-700 dark:text-darkCopyColor"
+  >
     <!-- cookieboks -->
     <div class="bottom-auto grid bg-pink-200 p-medium" id="cookieboks">
       <div class="grid place-items-center">
@@ -39,117 +41,190 @@
       </div>
     </div>
     <!-- Header -->
-    <header class="sticky top-0 z-10 bg-menuBackgroundColor">
-      <nav
-        class="flex items-center justify-between border-b-2 border-sienna-500 px-6 py-4 text-menulinks_mobile text-overskriftColor"
-      >
-        <div>
-          <a href="index.html"
-            ><img
-              class="w-20"
-              src="/img/julienielsdotter_logo-8.png"
-              alt="Logo - til forsiden"
-              title="Gå til forsiden"
-          /></a>
-        </div>
-
-        <div class="hidden sm:block">
-          <ul class="flex flex-col gap-10 sm:flex-row">
-            <li class="py-4">
-              <a class="a_underline relative" href="shop.html">Shop</a>
-            </li>
-            <li class="py-4">
-              <a class="a_underline relative" href="design_selv.html"
-                >Design selv</a
-              >
-            </li>
-            <li class="py-4">
-              <a class="a_underline relative" href="gavekort.html">Gavekort</a>
-            </li>
-            <li class="py-4">
-              <a class="a_underline relative" href="om_julie.html">Om Julie</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Ikoner til søg og kurv -->
-        <div class="hidden sm:block">
-          <ul class="flex gap-5">
-            <li>
-              <img
-                src="/svg/soeg.svg"
-                alt="Søg på siden"
-                title="Søg på produkter"
-                class="cursor-pointer"
-              />
-            </li>
-            <li>
-              <a title="Gå til kurven" href="indkoebskurv.html"
-                ><img src="/svg/kurv.svg" alt="Til kurven"
-              /></a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Menu i mobil -->
-        <div
-          class="menu_punkter fixed top-0 right-0 z-10 hidden h-full w-screen bg-pink-100"
-        >
-          <!-- Ikon til luk i burger -->
-          <div class="flex justify-end pr-6 pt-10">
+    <header
+      class="sticky top-0 z-10 bg-menuBackgroundColor dark:bg-darkMenuBackgroundColor"
+    >
+      <nav>
+        <div class="mx-6 mt-5 flex justify-end gap-5">
+          <button id="dark">
             <img
-              class="menu_luk cursor-pointer"
-              src="/svg/close.svg"
-              alt="Luk menu"
-              title="Luk menu"
+              class="h-6 w-6"
+              src="svg/darkmodeDark.svg"
+              alt="Skift til darkmode knap"
             />
+          </button>
+          <button id="light">
+            <img
+              class="h-6 w-6"
+              src="svg/lightmodeDark.svg"
+              alt="Skift til lightmode knap"
+            />
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between border-b-2 border-sienna-500 px-6 pb-4 text-menulinks_mobile text-overskriftColor dark:border-pink-500 dark:text-darkOverskriftColor"
+        >
+          <div>
+            <a href="index.html"
+              ><img
+                class="w-20"
+                src="/img/julienielsdotter_logo-8.png"
+                alt="Logo - til forsiden"
+                title="Gå til forsiden"
+            /></a>
           </div>
 
-          <!-- Menupunkter mobil -->
-          <ul class="flex w-full flex-col pt-6 text-center sm:flex-row">
-            <li class="w-full py-4">
-              <a class="a_chosen relative" href="index.html">Forside</a>
-            </li>
-            <li class="w-full py-4">
-              <a class="a_underline relative" href="shop.html">Shop</a>
-            </li>
-            <li class="py-4">
-              <a class="a_underline relative" href="design_selv.html"
-                >Design selv</a
-              >
-            </li>
-            <li class="w-full py-4">
-              <a class="a_underline relative" href="gavekort.html">Gavekort</a>
-            </li>
-            <li class="w-full py-4">
-              <a class="a_underline relative" href="om_julie.html">Om Julie</a>
-            </li>
-          </ul>
-          <ul class="flex justify-center gap-8">
-            <li class="py-4">
-              <img
-                src="/svg/soeg.svg"
-                alt="Søg på siden"
-                title="Søg på produkter"
-                class="cursor-pointer"
-              />
-            </li>
-            <li class="py-4">
-              <a title="Gå til kurven" href="indkoebskurv.html"
-                ><img src="/svg/kurv.svg" alt="Til kurven"
-              /></a>
-            </li>
-          </ul>
-        </div>
+          <div class="hidden sm:block">
+            <ul class="flex flex-col gap-10 sm:flex-row">
+              <li class="py-4">
+                <a class="a_underline relative" href="shop.html">Shop</a>
+              </li>
+              <li class="py-4">
+                <a class="a_underline relative" href="design_selv.html"
+                  >Design selv</a
+                >
+              </li>
+              <li class="py-4">
+                <a class="a_underline relative" href="gavekort.html"
+                  >Gavekort</a
+                >
+              </li>
+              <li class="py-4">
+                <a class="a_underline relative" href="om_julie.html"
+                  >Om Julie</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <!-- Ikon til burger menu -->
-        <div class="flex items-center gap-8 sm:hidden">
-          <img
-            class="menu_click w-8 cursor-pointer"
-            src="/svg/burger.svg"
-            alt="burger menu"
-            title="Åbn menu"
-          />
+          <!-- Ikoner til søg og kurv -->
+          <div class="hidden sm:block">
+            <ul class="flex gap-5">
+              <li>
+                <img
+                  src="/svg/soeg.svg"
+                  alt="Søg på siden"
+                  title="Søg på produkter"
+                  class="cursor-pointer dark:hidden"
+                />
+                <img
+                  src="/svg/soegDarkMode.svg"
+                  alt="Søg på siden"
+                  title="Søg på produkter"
+                  class="hidden cursor-pointer dark:block"
+                />
+              </li>
+
+              <li>
+                <a title="Gå til kurven" href="indkoebskurv.html"
+                  ><img
+                    src="/svg/kurv.svg"
+                    alt="Til kurven"
+                    class="dark:hidden"
+                  />
+                  <img
+                    src="/svg/kurvDarkMode.svg"
+                    alt="Til kurven"
+                    class="hidden dark:block"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu i mobil -->
+          <div
+            class="menu_punkter fixed top-0 right-0 z-10 hidden h-full w-screen bg-pink-100 dark:bg-black-600"
+          >
+            <!-- Ikon til luk i burger -->
+            <div class="flex justify-end pr-6 pt-10">
+              <div class="menu_luk cursor-pointer">
+                <img
+                  class="dark:hidden"
+                  src="/svg/close.svg"
+                  alt="Luk menu"
+                  title="Luk menu"
+                />
+                <img
+                  class="dark:block"
+                  src="/svg/closeDarkMode.svg"
+                  alt="Luk menu"
+                  title="Luk menu"
+                />
+              </div>
+            </div>
+
+            <!-- Menupunkter mobil -->
+            <ul class="flex w-full flex-col pt-6 text-center sm:flex-row">
+              <li class="w-full py-4">
+                <a class="a_chosen relative" href="index.html">Forside</a>
+              </li>
+              <li class="w-full py-4">
+                <a class="a_underline relative" href="shop.html">Shop</a>
+              </li>
+              <li class="py-4">
+                <a class="a_underline relative" href="design_selv.html"
+                  >Design selv</a
+                >
+              </li>
+              <li class="w-full py-4">
+                <a class="a_underline relative" href="gavekort.html"
+                  >Gavekort</a
+                >
+              </li>
+              <li class="w-full py-4">
+                <a class="a_underline relative" href="om_julie.html"
+                  >Om Julie</a
+                >
+              </li>
+            </ul>
+            <ul class="flex justify-center gap-8">
+              <li class="py-4">
+                <img
+                  src="/svg/soeg.svg"
+                  alt="Søg på siden"
+                  title="Søg på produkter"
+                  class="cursor-pointer dark:hidden"
+                />
+                <img
+                  src="/svg/soegDarkMode.svg"
+                  alt="Søg på siden"
+                  title="Søg på produkter"
+                  class="hidden cursor-pointer dark:block"
+                />
+              </li>
+              <li class="py-4">
+                <a title="Gå til kurven" href="indkoebskurv.html"
+                  ><img
+                    src="/svg/kurv.svg"
+                    alt="Til kurven"
+                    class="dark:hidden" />
+                  <img
+                    src="/svg/kurvDarkMode.svg"
+                    alt="Til kurven"
+                    class="hidden dark:block"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ikon til burger menu -->
+          <div class="flex items-center gap-8 sm:hidden">
+            <div class="menu_click w-8 cursor-pointer">
+              <img
+                class="dark:hidden"
+                src="/svg/burger.svg"
+                alt="burger menu"
+                title="Åbn menu"
+              />
+              <img
+                class="hidden dark:block"
+                src="/svg/burgerDarkMode.svg"
+                alt="burger menu"
+                title="Åbn menu"
+              />
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -160,14 +235,21 @@
       <section class="main items-center justify-center sm:flex">
         <div class="pt-large pb-medium sm:order-1">
           <img
-            class="w-full max-w-sm"
+            class="w-full max-w-sm dark:hidden"
             src="/img/stregtegning1.svg"
+            alt="stregtegning af julie niels dotter"
+          />
+        </div>
+        <div class="pt-large pb-medium sm:order-1">
+          <img
+            class="hidden w-full max-w-sm dark:block"
+            src="/img/stregtegning1DarkMode.svg"
             alt="stregtegning af julie niels dotter"
           />
         </div>
         <div class="max-w-lg basis-full">
           <h1
-            class="text-center text-H1_mobile text-sienna-500 sm:pt-large sm:text-H1_desktop"
+            class="text-center text-H1_mobile text-sienna-500 dark:text-darkColor_h1 sm:pt-large sm:text-H1_desktop"
           >
             JULIE NIELSDOTTER <br />
             <span class="text-H2_mobile sm:text-H2_desktop">JEWELLERY</span>
@@ -196,10 +278,17 @@
 
       <!-- lille pil -->
       <div class="main flex items-center justify-center pt-medium">
-        <a href="index.html#second_section">
+        <a class="dark:hidden" href="index.html#second_section">
           <img
             class="hidden w-10 drop-shadow-knapShadow sm:block"
             src="/svg/pilned.svg"
+            alt="scroll ned og se mere pil"
+          />
+        </a>
+        <a class="hidden dark:block" href="index.html#second_section">
+          <img
+            class="hidden w-10 drop-shadow-knapShadow sm:block"
+            src="/svg/pilnedDarkMode.svg"
             alt="scroll ned og se mere pil"
           />
         </a>
@@ -294,7 +383,7 @@
       <section class="main grid-cols-2 md:grid">
         <div>
           <h2
-            class="pb-medium text-H2_mobile text-sienna-500 md:text-H2_desktop"
+            class="pb-medium text-H2_mobile text-sienna-500 dark:text-darkOverskriftColor md:text-H2_desktop"
           >
             Vær med i processen
           </h2>
@@ -315,10 +404,19 @@
             </button>
           </form>
         </div>
-        <div class="flex items-center justify-center pb-medium pt-large">
+        <div
+          class="flex items-center justify-center pb-medium pt-large dark:hidden"
+        >
           <img
             class="w-3/4 md:w-96 md:pt-0"
             src="/img/stregtegning2.svg"
+            alt="Stregtegning af julie Nielsdotter"
+          />
+        </div>
+        <div class="flex items-center justify-center pb-medium pt-large">
+          <img
+            class="hidden w-3/4 dark:block md:w-96 md:pt-0"
+            src="/img/stregtegning2DarkMode.svg"
             alt="Stregtegning af julie Nielsdotter"
           />
         </div>
@@ -337,10 +435,10 @@
             />
           </div>
           <div
-            class="rounded-billederRadius bg-pink-200 drop-shadow-billederShadow"
+            class="rounded-billederRadius bg-pink-200 drop-shadow-billederShadow dark:bg-black-600"
           >
             <h2
-              class="px-medium py-medium text-H2_mobile text-sienna-500 md:text-H2_desktop"
+              class="px-medium py-medium text-H2_mobile text-sienna-500 dark:text-darkOverskriftColor md:text-H2_desktop"
             >
               Giv et gavekort
             </h2>
@@ -372,7 +470,7 @@
 
     <!-- Footer -->
     <footer
-      class="border-t-4 border-sienna-500 bg-footer pt-11 pb-4 text-body_xs"
+      class="border-t-4 border-sienna-500 bg-footer pt-11 pb-4 text-body_xs dark:border-pink-500 dark:bg-darkFooter"
     >
       <div class="footer_div mx-auto grid-cols-2 justify-evenly sm:grid">
         <div class="justify-around sm:flex">
@@ -435,7 +533,15 @@
                     src="/svg/instagram.svg"
                     alt="Instagram-ikon"
                     title="Åbn Instagram"
-                /></a>
+                    class="dark:hidden"
+                  />
+                  <img
+                    src="/svg/instagramDarkMode.svg"
+                    alt="Instagram-ikon"
+                    title="Åbn Instagram"
+                    class="hidden dark:block"
+                  />
+                </a>
               </li>
               <li>
                 <a
@@ -445,7 +551,15 @@
                     src="/svg/facebook.svg"
                     alt="FaceBook-ikon"
                     title="Åbn Facebook"
-                /></a>
+                    class="dark:hidden"
+                  />
+                  <img
+                    src="/svg/facebookDarkMode.svg"
+                    alt="FaceBook-ikon"
+                    title="Åbn Facebook"
+                    class="hidden dark:block"
+                  />
+                </a>
               </li>
             </ul>
           </div>
